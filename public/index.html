@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
+    <script src="js/comando.js"></script>
     <title>Hello, world!</title>
 </head>
 
@@ -38,19 +39,21 @@
                 botón para hacer ofertas solo se activa luego de 30 segundos desde la última oferta.
             </li>
         </ol>
-        <hr />
-        <h2>Formulario de inscripción</h2>
-        <form>
-            <div class="form-group">
-                <label for="nit">NIT</label>
-                <input type="text" class="form-control" id="nit" placeholder="Número de Identificación Tributaria">
-            </div>
-            <div class="form-group">
-                <label for="razonsocial">Razón Social</label>
-                <input type="text" class="form-control" id="razonsocial" placeholder="Nombre del participante">
-            </div>
-            <button type="submit" class="btn btn-primary">Registrarse</button>
-        </form>
+        <div id="formularioIni">
+            <hr />
+            <h2>Formulario de inscripción</h2>
+            <form>
+                <div class="form-group">
+                    <label for="nit">NIT</label>
+                    <input type="text" class="form-control" id="nit" placeholder="Número de Identificación Tributaria">
+                </div>
+                <div class="form-group">
+                    <label for="razonsocial">Razón Social</label>
+                    <input type="text" class="form-control" id="razonsocial" placeholder="Nombre del participante">
+                </div>
+                <button type="submit" class="btn btn-primary" onclick="javascript:formFin()" >Registrarse</button>
+            </form>
+        </div>
         <hr />
         <h2>Listado de ofertas</h2>
         <!--Reemplace estos párrafos por las ofertas reales recibidas-->
@@ -58,7 +61,7 @@
         <p>Grupo Fernánez Gómez [Oferta no aceptada]</p>
         <p>Unión Temporal Sinergia [Oferta no aceptada]</p>
         <p>Grupo DRFE [<strong>Oferta aceptada. Valor: $168.054.320</strong>]</p>
-        <button type="submit" class="btn btn-primary">Ofertar</button>
+        <button type="submit" class="btn btn-primary" disabled="disabled" id="ofertaBtn" onclick="javascript:ofertar()" >Ofertar</button>
     </div>
 
 
